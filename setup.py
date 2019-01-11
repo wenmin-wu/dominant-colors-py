@@ -9,11 +9,12 @@ with open('./README.md') as f:
 setup(
     name='dominantcolors',
     version='0.1.0',
-    description='Dominant Colors',
+    description='A module to grab dominant colors from image',
     long_description=readme,
+    long_description_content_type="text/markdown",
+    url="https://github.com/wenmin-wu/dominant-colors-py",
     author='wuwenmin',
     author_email='wuwenmin1991@gmail.com',
     py_modules=['dominantcolors'],
-    packages=find_packages(include=['dominantcolors']),
     install_requires=['numpy', 'Pillow']
 )

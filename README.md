@@ -1,11 +1,11 @@
 # Dominant Colors
-A python module for grabbing dominant colors from an image. It's much faster than ColorThief.
+A python module for grabbing dominant colors from an image. It's much faster than colorthief.
 
 
 ## Installation
 
 ```bash
-pip install dominantcolors #not yet
+pip install dominantcolors
 ```
 
 ## Usage
