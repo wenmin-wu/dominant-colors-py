@@ -1,0 +1,17 @@
+*.DS_Store
+*.pyc
+*.swp
+temp/*
+dist/*
+build/*
+tags
+dominantcolors.egg-info
+.ipynb_checkpoints
+
+# test-related
+.pytest_cache
+.coverage
+.cache
+
+# developer environments
+.idea
