@@ -205,7 +205,7 @@ def get_image_dominant_colors(image_path,
     return get_dominant_colors(image, num_colors)
 
 
-def get_dominant_colors(image, num_colors):
+def get_dominant_colors_for(image, num_colors):
     """Get dominant colors from a given pillow Image instance"""
     im_arr = np.asarray(image)
     if image.mode == 'RGBA':
