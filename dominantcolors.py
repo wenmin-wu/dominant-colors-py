@@ -98,7 +98,8 @@ def find_dominant_colors(img_colors, count):
     colors = img_colors / 255.
     if len(colors.shape) == 3 and colors.shape[-1] == 3:
         colors = colors.reshape((-1, 3))
-    classes = np.ones(colors.shape[0], np.int8)  # map each color to the first class id
+    # map each color to the first class id
+    classes = np.ones(colors.shape[0], np.int8)
     root = ColorNode()
     root.class_id = 1
     get_class_mean_cov(colors, classes, root)
@@ -201,6 +202,11 @@ def get_dominant_colors(root):
 def get_image_dominant_colors(image_path,
                               num_colors):
     image = Image.open(image_path)
+    return get_dominant_colors(image, num_colors)
+
+
+def get_dominant_colors(image, num_colors):
+    """Get dominant colors from a given pillow Image instance"""
     im_arr = np.asarray(image)
     if image.mode == 'RGBA':
         im_arr = rgba2rgb(im_arr)
