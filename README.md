@@ -14,6 +14,16 @@ from dominantcolors import get_image_dominant_colors
 dominant_colors = get_image_dominant_colors(image_path='/path/to/image_path',num_colors=3)
 ```
 
+Or you can use directly a Pillow Image instance:
+
+```python
+from dominantcolors import get_dominant_colors_for
+from PIL import Image
+
+image = Image.open("/path/to/image.jpg", num_colors=3)
+dominant_colors = get_dominant_colors_for(image)
+```
+
 ## Performance
 ```python
 import time
