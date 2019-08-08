@@ -202,7 +202,7 @@ def get_dominant_colors(root):
 def get_image_dominant_colors(image_path,
                               num_colors):
     image = Image.open(image_path)
-    return get_dominant_colors(image, num_colors)
+    return get_dominant_colors_for(image, num_colors)
 
 
 def get_dominant_colors_for(image, num_colors):
